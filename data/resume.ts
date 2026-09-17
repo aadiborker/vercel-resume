@@ -43,7 +43,7 @@ export const siteUrl = "https://adithya-borker.vercel.app";
 export const profile: Profile = {
   name: "Adithya Borker",
   headline: "Junior ERP Support Specialist / Odoo ERP Consultant",
-  location: "Mangaluru, Karnataka, India",
+  location: "Puttur, Karnataka, India",
   summary:
     "Odoo consultant at The Web People LLP working across Odoo Online (SaaS), Odoo.sh, and self-hosted Community Edition. Focused on custom module development, POS extensions, hardware integrations, client migrations, and third-party system integrations.",
   links: [
