@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { profile, siteUrl } from "@/data/resume";
+import { profile } from "@/data/resume";
+import { getBaseUrl } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
@@ -16,9 +17,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const metadataBase = new URL(
-  (process.env.SITE_URL ?? siteUrl).replace(/\/$/, ""),
-);
+const metadataBase = new URL(getBaseUrl());
 
 export const metadata: Metadata = {
   metadataBase,

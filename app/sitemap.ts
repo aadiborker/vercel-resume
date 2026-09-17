@@ -1,9 +1,5 @@
 import type { MetadataRoute } from "next";
-import { siteUrl } from "@/data/resume";
-
-function getBaseUrl() {
-  return (process.env.SITE_URL ?? siteUrl).replace(/\/$/, "");
-}
+import { getBaseUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
