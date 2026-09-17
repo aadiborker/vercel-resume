@@ -8,6 +8,8 @@ export type Profile = {
   headline: string;
   location: string;
   summary: string;
+  /** Path under /public, e.g. "/photo.jpg" */
+  photo?: string;
   links: Link[];
 };
 
@@ -44,6 +46,7 @@ export const profile: Profile = {
   name: "Adithya Borker",
   headline: "Junior ERP Support Specialist / Odoo ERP Consultant",
   location: "Puttur, Karnataka, India",
+  photo: "/photo.jpg",
   summary:
     "Odoo consultant at The Web People LLP working across Odoo Online (SaaS), Odoo.sh, and self-hosted Community Edition. Focused on custom module development, POS extensions, hardware integrations, client migrations, and third-party system integrations.",
   links: [

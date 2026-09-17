@@ -1,14 +1,30 @@
+import Image from "next/image";
 import { profile } from "@/data/resume";
 
 export default function Header() {
   return (
     <header className="animate-enter space-y-5">
-      <div className="space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-100 sm:text-4xl">
-          {profile.name}
-        </h1>
-        <p className="text-lg text-neutral-300">{profile.headline}</p>
-        <p className="text-sm text-neutral-500">{profile.location}</p>
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
+        <div className="space-y-2">
+          <h1 className="text-3xl font-semibold tracking-tight text-neutral-100 sm:text-4xl">
+            {profile.name}
+          </h1>
+          <p className="text-lg text-neutral-300">{profile.headline}</p>
+          <p className="text-sm text-neutral-500">{profile.location}</p>
+        </div>
+
+        {profile.photo ? (
+          <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border border-neutral-800 sm:h-32 sm:w-32">
+            <Image
+              src={profile.photo}
+              alt={profile.name}
+              fill
+              priority
+              sizes="128px"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
       </div>
 
       <p className="max-w-2xl text-base leading-relaxed text-neutral-400">
