@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page-glow: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(64, 64, 64, 0.35),
+    transparent 70%
+  );
+}
+
+body {
+  background-color: #0a0a0a;
+  background-image: var(--page-glow);
+  background-attachment: fixed;
+  color: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-enter {
+    animation: enter 0.6s ease-out both;
+  }
+
+  .animate-enter-delay-1 {
+    animation-delay: 80ms;
+  }
+
+  .animate-enter-delay-2 {
+    animation-delay: 160ms;
+  }
+
+  .animate-enter-delay-3 {
+    animation-delay: 240ms;
+  }
+
+  .animate-enter-delay-4 {
+    animation-delay: 320ms;
+  }
+
+  .animate-enter-delay-5 {
+    animation-delay: 400ms;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-enter,
+  .animate-enter-delay-1,
+  .animate-enter-delay-2,
+  .animate-enter-delay-3,
+  .animate-enter-delay-4,
+  .animate-enter-delay-5 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body * {
+    color: #000000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  header nav,
+  .site-nav,
+  #contact {
+    display: none !important;
+  }
+
+  .experience-entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+}
