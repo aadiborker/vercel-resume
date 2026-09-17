@@ -67,7 +67,7 @@ export const experience: Role[] = [
   {
     company: "The Web People LLP",
     title: "Junior ERP Support Specialist / Odoo ERP Consultant",
-    location: "Mangaluru, Karnataka, India",
+    location: "Puttur, Karnataka, India",
     start: "2024",
     end: "Present",
     bullets: [
