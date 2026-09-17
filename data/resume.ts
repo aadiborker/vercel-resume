@@ -99,6 +99,12 @@ export const projects: Project[] = [
       "Placeholder: scripts and checklists used to migrate clients between Odoo Online, Odoo.sh, and Community Edition.",
     tech: ["Odoo", "PostgreSQL", "Shell / Python scripts"],
   },
+  {
+    name: "ReplyFlow",
+    description:
+      "Placeholder: An Open CRM which uses the official Meta Whatsapp Business API to send and receive messages from customers.",
+    tech: ["node.js", "PostgreSQL", "Next,js","Superbase","Typescript","Tailwind CSS","Shadcn UI"],
+  },
 ];
 
 export const skills: SkillGroup[] = [
