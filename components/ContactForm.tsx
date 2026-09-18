@@ -56,7 +56,7 @@ export default function ContactForm() {
 
   return (
     <Section id={section.id} title={section.label}>
-      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      <form onSubmit={handleSubmit} className="max-w-xl space-y-6" noValidate>
         {/* Honeypot — hidden from users, bots often fill it */}
         <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
           <label htmlFor="website">Website</label>
@@ -79,7 +79,7 @@ export default function ContactForm() {
             type="text"
             required
             maxLength={100}
-            className="w-full border border-neutral-800 bg-neutral-950/80 px-3 py-2 text-neutral-100 outline-none transition-[border-color,background-color] duration-200 focus:border-neutral-500 focus:bg-neutral-900"
+            className="w-full border-b border-neutral-800 bg-transparent px-0 py-2 text-neutral-100 outline-none transition-colors duration-200 focus:border-neutral-400"
           />
         </div>
 
@@ -93,7 +93,7 @@ export default function ContactForm() {
             type="email"
             required
             maxLength={200}
-            className="w-full border border-neutral-800 bg-neutral-950/80 px-3 py-2 text-neutral-100 outline-none transition-[border-color,background-color] duration-200 focus:border-neutral-500 focus:bg-neutral-900"
+            className="w-full border-b border-neutral-800 bg-transparent px-0 py-2 text-neutral-100 outline-none transition-colors duration-200 focus:border-neutral-400"
           />
         </div>
 
@@ -107,14 +107,14 @@ export default function ContactForm() {
             required
             rows={5}
             maxLength={5000}
-            className="w-full resize-y border border-neutral-800 bg-neutral-950/80 px-3 py-2 text-neutral-100 outline-none transition-[border-color,background-color] duration-200 focus:border-neutral-500 focus:bg-neutral-900"
+            className="w-full resize-y border-b border-neutral-800 bg-transparent px-0 py-2 text-neutral-100 outline-none transition-colors duration-200 focus:border-neutral-400"
           />
         </div>
 
         <button
           type="submit"
           disabled={status === "loading"}
-          className="border border-neutral-700 px-4 py-2 text-sm text-neutral-100 transition-[border-color,background-color,transform] duration-200 hover:border-neutral-500 hover:bg-neutral-900 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100"
+          className="link-underline text-sm text-neutral-100 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:no-underline"
         >
           {status === "loading" ? "Sending…" : "Send message"}
         </button>

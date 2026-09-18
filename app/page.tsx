@@ -8,9 +8,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
+    <main className="mx-auto max-w-3xl px-6 py-20 sm:px-8 sm:py-28">
       <JumpNav />
-      <div className="space-y-16">
+      <div className="space-y-24 sm:space-y-28">
         <Header />
         <ScrollReveal>
           <Experience />

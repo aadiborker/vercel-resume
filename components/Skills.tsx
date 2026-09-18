@@ -6,13 +6,13 @@ const section = navigation.find((item) => item.id === "skills")!;
 export default function Skills() {
   return (
     <Section id={section.id} title={section.label}>
-      <ul className="space-y-6">
+      <ul className="space-y-8">
         {skills.map((group) => (
-          <li key={group.category} className="space-y-1">
+          <li key={group.category} className="space-y-2">
             <h3 className="text-sm font-medium text-neutral-300">
               {group.category}
             </h3>
-            <p className="leading-relaxed text-neutral-400">
+            <p className="leading-7 text-neutral-400">
               {group.items.join(" · ")}
             </p>
           </li>
